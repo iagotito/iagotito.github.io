@@ -5,18 +5,17 @@
   transition: all 0.2s;
 }
 
-.contaier {
-  margin-left: 5%;
-  margin-right: 5%;
+.head {
+    height: 65px;
+    position: fixed;
 }
 
 .navbar {
     width: 100%;
-    height: 65px;
     position: fixed;
     line-height: 65px;
     text-align: center;
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     font-family: 'Hack', sans-serif;
 }
 
@@ -52,7 +51,7 @@
 
 .navbar div.navlist ul li {
   width: 120px;
-  height: 65px;
+  height: 60x;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
@@ -71,5 +70,38 @@
 }
 
 .navbar div.navlist ul li:hover {
-  background-color: rgba(10, 50, 200, 0.8);
+  background-color: rgba(13, 13, 13, 0.33);
+}
+
+.background-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  z-index: -1;
+}
+
+.body {
+  position: relative;
+  top: 65px;
+}
+
+.greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 65px);
+}
+
+.greetings h1 {
+  font-size: 15vh;
+  color: rgb(245, 245, 245, 1);
+}
+
+.greetings p {
+  font-size: 6vh;
+  color: rgb(200, 200, 200, 1);
 }
