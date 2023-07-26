@@ -5,18 +5,34 @@
   transition: all 0.2s;
 }
 
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .head {
-    height: 65px;
-    position: fixed;
+  height: 65px;
+  position: fixed;
 }
 
 .navbar {
-    width: 100%;
-    position: fixed;
-    line-height: 65px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0);
-    font-family: 'Hack', sans-serif;
+  width: 80%;
+  max-width: 1400px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Hack', sans-serif;
+}
+
+.navbar.dark {
+  background-color: #333;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .navbar div.logo {
@@ -29,6 +45,8 @@
   text-decoration: none;
   color: #fff;
   font-size: 1.8em;
+  user-select: none;
+  pointer-events: none;
 }
 
 .navbar div.logo a:hover {
@@ -57,12 +75,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
+  pointer-events: none;
 }
 
 .navbar div.navlist ul a {
   text-decoration: none;
   color: #fff;
   line-height: 65px;
+  user-select: none;
 }
 
 .navbar div.navlist ul li a:hover {
@@ -79,13 +100,15 @@
   background-image: url('./images/background.jpg');
   background-size: cover;
   background-position: center center;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
 .body {
-  position: relative;
-  top: 65px;
+  padding-top: 65px;
+  overflow-y: auto;
 }
 
 .greetings {
@@ -103,5 +126,34 @@
 
 .greetings p {
   font-size: 6vh;
+  color: rgb(200, 200, 200, 1);
+}
+
+#about {
+  display: flex;
+}
+
+.about-picture {
+  width: 33.33%;
+}
+
+.about-picture img {
+  max-width: 100%;
+  max-height: 550px;
+  display: block;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  color: rgb(245, 245, 245, 1);
+}
+
+.about-text p {
+  font-size: 24px;
   color: rgb(200, 200, 200, 1);
 }

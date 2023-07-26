@@ -10,26 +10,37 @@
   </head>
   <body>
     <div class="background-container"/>
-    <div class="head">
-      <div class="navbar">
-        <div class="container">
+    <div class="container">
+      <div class="head">
+        <div class="navbar">
           <div class="logo">
             <a href="#">Iago</a>
           </div>
           <div class="navlist" id="mainListDiv">
             <ul>
-              <a href="#"><li>Início</li></a>
-              <a href="#"><li>Sobre mim</li></a>
+              <a onclick="smoothScrollToTop()"><li>Início</li></a>
+              <a href="javascript:void(0);" onclick="smoothScroll('#about')"><li>Sobre mim</li></a>
               <a href="#"><li>Projetos</li></a>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-    <div class ="body">
-      <div class="greetings">
-        <h1>Saudações</h1>
-        <p>site ainda em construção, volte mais tarde</p>
+
+      <div class ="body">
+        <div class="greetings">
+          <h1>Saudações</h1>
+          <p>site ainda em construção, volte mais tarde</p>
+        </div>
+
+        <section id="about">
+          <div class="about-picture">
+            <img src="./images/me.jpg">
+          </div>
+          <div class="about-text">
+            <h2>Sobre mim</h2>
+            <p>Há tanto para se falar, mas tanta preguiça para compensar.</p>
+          </div>
+        </section>
       </div>
     </div>
 
