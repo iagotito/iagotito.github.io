@@ -35,24 +35,16 @@ function smoothScrollToTop() {
 }
 
 let prevScrollPos = window.pageYOffset;
-const greetingsSection = document.querySelector('.greetings');
-const aboutSection = document.querySelector('#about');
+const begginingSection = document.querySelector('#beggining-section');
+const projectsSection = document.querySelector('#projects-section');
+const contactSection = document.querySelector('#contact-section');
 const navbar = document.querySelector('.navbar');
 
 function handleScroll() {
   const currentScrollPos = window.pageYOffset;
-  const greetingsSectionTop = greetingsSection.getBoundingClientRect().top;
-  const aboutSectionTop = aboutSection.getBoundingClientRect().top;
-
-  // Determine if the navbar should have a dark background or be transparent
-  if (aboutSectionTop <= 65) { // The height of the fixed navbar
-    navbar.classList.add('dark');
-  } else {
-    navbar.classList.remove('dark');
-  }
 
   // Determine scroll direction and show/hide navbar
-  if (currentScrollPos > prevScrollPos && currentScrollPos > aboutSectionTop && !afterSectionClick) {
+  if (currentScrollPos > prevScrollPos && !afterSectionClick) {
     navbar.classList.add('hidden');
   } else {
     navbar.classList.remove('hidden');

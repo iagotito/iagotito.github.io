@@ -1,159 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.2s;
-}
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+@import "https://fonts.cdnfonts.com/css/hack";
 
-.container {
-  width: 80%;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.head {
-  height: 65px;
-  position: fixed;
+:root {
+  --bulma-body-family: Hack;
 }
 
 .navbar {
-  width: 80%;
-  max-width: 1400px;
-  position: fixed;
-  line-height: 65px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  font-family: 'Hack', sans-serif;
+  --bulma-navbar-padding-vertical: 0.5rem;
+  transition: all .3s ease;
 }
 
-.navbar.dark {
-  background-color: #333;
+.navbar-item.logo {
+  --bulma-navbar-item-img-max-height: 75px;
+  --bulma-navbar-item-background-l: none;
 }
 
 .navbar.hidden {
   transform: translateY(-100%);
-}
-
-.navbar div.logo {
-  margin-left: 20px;
-  height: 65px;
-  position: absolute;
-}
-
-.navbar div.logo a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.8em;
-  user-select: none;
-  pointer-events: none;
-}
-
-.navbar div.logo a:hover {
-  color: #c0c0c0;
-}
-
-.navbar div.navlist {
-  height: 65px;
-  float: right;
-  margin-right: 5px;
-}
-
-.navbar div.navlist ul {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  list-style: none;
-  margin-right: 20px;
-}
-
-.navbar div.navlist ul li {
-  width: 120px;
-  height: 60x;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  pointer-events: none;
-}
-
-.navbar div.navlist ul a {
-  text-decoration: none;
-  color: #fff;
-  line-height: 65px;
-  user-select: none;
-}
-
-.navbar div.navlist ul li a:hover {
-  color: #c0c0c0;
-}
-
-.navbar div.navlist ul li:hover {
-  background-color: rgba(13, 13, 13, 0.33);
-}
-
-.background-container {
-  width: 100%;
-  height: 100vh;
-  background-image: url('./images/background.jpg');
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.body {
-  padding-top: 65px;
-  overflow-y: auto;
-}
-
-.greetings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: calc(100vh - 65px);
-}
-
-.greetings h1 {
-  font-size: 15vh;
-  color: rgb(245, 245, 245, 1);
-}
-
-.greetings p {
-  font-size: 6vh;
-  color: rgb(200, 200, 200, 1);
-}
-
-#about {
-  display: flex;
-}
-
-.about-picture {
-  width: 33.33%;
-}
-
-.about-picture img {
-  max-width: 100%;
-  max-height: 550px;
-  display: block;
-}
-
-.about-text {
-  flex: 1;
-  padding: 20px;
-}
-
-.about-text h2 {
-  font-size: 40px;
-  color: rgb(245, 245, 245, 1);
-}
-
-.about-text p {
-  font-size: 24px;
-  color: rgb(200, 200, 200, 1);
 }

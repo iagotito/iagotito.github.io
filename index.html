@@ -1,49 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iago Tito</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iago</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.cdnfonts.com/css/hack" rel="stylesheet">
   </head>
-  <body>
-    <div class="background-container"/>
-    <div class="container">
-      <div class="head">
-        <div class="navbar">
-          <div class="logo">
-            <a href="#">Iago</a>
-          </div>
-          <div class="navlist" id="mainListDiv">
-            <ul>
-              <a onclick="smoothScrollToTop()"><li>Início</li></a>
-              <a href="javascript:void(0);" onclick="smoothScroll('#about')"><li>Sobre mim</li></a>
-              <a href="#"><li>Projetos</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class ="body">
-        <div class="greetings">
-          <h1>Saudações</h1>
-          <p>site ainda em construção, volte mais tarde</p>
-        </div>
-
-        <section id="about">
-          <div class="about-picture">
-            <img src="./images/me.jpg">
-          </div>
-          <div class="about-text">
-            <h2>Sobre mim</h2>
-            <p>Há tanto para se falar, mas tanta preguiça para compensar.</p>
-          </div>
-        </section>
+  <body class="has-navbar-fixed-top">
+  <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item logo is-size-3" href="/">
+        <img src="images/sunglasses.png" alt="Logo" width="75px">
+        Iago
+      </a>
+    </div>
+    <div class="navbar-menu is-active">
+      <div class="navbar-end">
+        <a class="navbar-item" onclick="smoothScroll('#beggining-section')">
+          Início
+        </a>
+        <a class="navbar-item" onclick="smoothScroll('#projects-section')">
+          Projetos
+        </a>
+        <a class="navbar-item" onclick="smoothScroll('#contact-section')">
+          Contato
+        </a>
       </div>
     </div>
+  </nav>
 
-	<script src="scripts/index.js"></script>
+  <section class="section" id="beggining-section">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        <h1 class="title">
+          Saudações!
+        </h1>
+        <h2 class=subtitle>
+          Eu me chamo Iago e seja bem vindo ao meu site.
+        </h2>
+        <p>
+        Este é um ambiente para exibir meus projetos inacados que estão marcados
+        para terminar um dia, criado depois de muito esforço para alinhar todos os
+        elementos.
+        </p>
+        <br>
+        <p>
+        Sou um programador e gosto bastante de usar Pyhton ou Go nos meus
+        projetos. Quando preciso fazer alguma página, me viro com o básico de
+        JavaScript, HTML e CSS, sem usar nenhuma biblioteca para isso pois
+        nunca precisei.
+        </p>
+      </div>
+      <div class="column">
+        <figure class="image">
+          <img src="images/me.png" style="width: 14em; height: 18.667em;"></img>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-info" id="projects-section">
+    <div class="hero-body">
+      <p class="title">Projetos</p>
+      <p class="subtitle">Ainda vou adicionar meus projetos aqui, volte depois.</p>
+    </div>
+  </section>
+
+  <section class="hero is-primary" id=contact-section>
+    <div class="hero-body">
+      <p class="title">Contato</p>
+      <p class="subtitle">Depois eu boto minhas informações de contato aqui também.</p>
+    </div>
+  </section>
+
+  <script src="/scripts/index.js"></script>
   </body>
 </html>
