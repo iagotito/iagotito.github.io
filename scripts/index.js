@@ -35,9 +35,9 @@ function smoothScrollToTop() {
 }
 
 let prevScrollPos = window.pageYOffset;
-const begginingSection = document.querySelector('#beggining-section');
-const projectsSection = document.querySelector('#projects-section');
-const contactSection = document.querySelector('#contact-section');
+const headerSection = document.querySelector('#headerSection');
+const projectsSection = document.querySelector('#projectsSection');
+const contactSection = document.querySelector('#contactSection');
 const navbar = document.querySelector('.navbar');
 
 function handleScroll() {
@@ -57,3 +57,25 @@ window.addEventListener('scroll', function() {
   handleScroll();
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});

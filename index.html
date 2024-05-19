@@ -7,72 +7,145 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="has-navbar-fixed-top">
-  <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-link is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item logo is-size-3" href="/">
         <img src="images/sunglasses.png" alt="Logo" width="75px">
         Iago
       </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-    <div class="navbar-menu is-active">
+    <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
-        <a class="navbar-item" onclick="smoothScroll('#beggining-section')">
+        <a class="navbar-item" onclick="smoothScroll('#headerSection')">
           Início
         </a>
-        <a class="navbar-item" onclick="smoothScroll('#projects-section')">
+        <a class="navbar-item" onclick="smoothScroll('#aboutSection')">
+          Sobre mim
+        </a>
+        <a class="navbar-item" onclick="smoothScroll('#resumeSection')">
+          Currículo
+        </a>
+        <a class="navbar-item" onclick="smoothScroll('#projectsSection')">
           Projetos
         </a>
-        <a class="navbar-item" onclick="smoothScroll('#contact-section')">
+        <a class="navbar-item" onclick="smoothScroll('#contactSection')">
           Contato
         </a>
       </div>
     </div>
   </nav>
 
-  <section class="section" id="beggining-section">
+  <section class="hero is-link is-fullheight is-fullheight-with-navbar" id="headerSection">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-8">
+            Saudações! Eu me chamo
+            <h1 class="title is-1">Iago Tito</h1>
+            <h2 class="subtitle is-3">SRE, engenheiro de observabilidade e programador</h2>
+          </div>
+          <div class="column is-4">
+            <figure class="image is-3by4">
+              <img src="images/iago-perifericos.png" alt="Iago Tito">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aboutSection">
+    <h3 class="title is-2">Sobre mim</h3>
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-4">
+          <figure class="image is-3by4">
+            <img src="images/iago-faco-programas.png" alt="Faço programas">
+          </figure>
+        </div>
+        <div class="column is-8">
+          <p>
+          Formado em Ciência da Computação pela Universidade Federal de Campina
+          Grande, trabalho atualmente na Stone como engenheiro de observabilidade.
+          </p>
+          <br>
+          <p>
+          Gosto de programação e frequentemente tenho ideias de algum programa
+          que eu poderia fazer. Mesmo que todas as minhas ideais provavelmente
+          já existam, eu ainda as inicio para aprender alguma cosia nova,
+          praticar ou só me diverir no processo. O difícil é acabar algum
+          desses projetos, mas um dia vai.
+          </p>
+          <br>
+          <p>
+          Tenho muita sensibilidade à luz, então, durante o dia, você sempre
+          vai me ver com esse óculos super eficiente conta a luminosidade
+          excessiva do sol.
+          </p>
+          <br>
+          <p>
+          No mais, também gosto de jogos, RPG e livros de ficção científica e fantasia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
     <div class="columns">
-      <div class="column is-two-thirds">
-        <h1 class="title">
-          Saudações!
-        </h1>
-        <h2 class=subtitle>
-          Eu me chamo Iago e seja bem vindo ao meu site.
-        </h2>
-        <p>
-        Este é um ambiente para exibir meus projetos inacados que estão marcados
-        para terminar um dia, criado depois de muito esforço para alinhar todos os
-        elementos.
-        </p>
+      <div class="column is-4">
+        <h2 class="title is-3">Habilidades</h2>
+      </div>
+      <div class="column is-8">
+        <div>
+          <p class="title is-5">Linguagens e Frameworks</p>
+          <p class="tags">
+          <span class="tag is-dark">Pyhton</span>
+          <span class="tag is-dark">Go</span>
+          <span class="tag is-dark">Lua</span>
+          <span class="tag is-dark">Bash</span>
+          <span class="tag is-dark">JavaScript</span>
+          <span class="tag is-dark">HTML5</span>
+          <span class="tag is-dark">CSS3</span>
+          <span class="tag is-dark">Flask</span>
+          </p>
+        </div>
         <br>
-        <p>
-        Sou um programador e gosto bastante de usar Pyhton ou Go nos meus
-        projetos. Quando preciso fazer alguma página, me viro com o básico de
-        JavaScript, HTML e CSS, sem usar nenhuma biblioteca para isso pois
-        nunca precisei.
-        </p>
+        <div><p class="title is-5">Outros</p>
+          <p class="tags">
+          <span class="tag is-dark">Git</span>
+          <span class="tag is-dark">Neovim</span>
+          <span class="tag is-dark">Docker</span>
+          <span class="tag is-dark">Kubernetes</span>
+          <span class="tag is-dark">Automação e Webscraping</span>
+          <span class="tag is-dark">Shell script</span>
+          <span class="tag is-dark">Linux</span>
+          <span class="tag is-dark">Rest API</span>
+          <span class="tag is-dark">Prometheus</span>
+          <span class="tag is-dark">Grafana Stack</span>
+          <span class="tag is-dark">Datadog</span>
+          </p>
+          <br>
+        </div>
       </div>
-      <div class="column">
-        <figure class="image">
-          <img src="images/me.png" style="width: 14em; height: 18.667em;"></img>
-        </figure>
-      </div>
     </div>
   </section>
 
-  <section class="hero is-info" id="projects-section">
-    <div class="hero-body">
-      <p class="title">Projetos</p>
-      <p class="subtitle">Ainda vou adicionar meus projetos aqui, volte depois.</p>
+  <footer class="footer">
+    <div class="content is-small">
+      <p>
+      Este site foi inspirado no
+      <a href="https://bulmatemplates.github.io/bulma-templates/templates/personal.html">template</a>
+      e site criados pelo
+      <a href="https://mubaidr.js.org">Muhammad Ubaid Raza</a>.
+      </p>
     </div>
-  </section>
-
-  <section class="hero is-primary" id=contact-section>
-    <div class="hero-body">
-      <p class="title">Contato</p>
-      <p class="subtitle">Depois eu boto minhas informações de contato aqui também.</p>
-    </div>
-  </section>
-
+  </footer>
   <script src="/scripts/index.js"></script>
   </body>
 </html>
