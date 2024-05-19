@@ -2,7 +2,7 @@ let afterSectionClick = false;
 
 function smoothScroll(target) {
   const element = document.querySelector(target);
-  const headerOffset = 65; // Adjust this value based on the header's height
+  const headerOffset = 65;
   const elementPosition = element.getBoundingClientRect().top;
   const offsetPosition = elementPosition - headerOffset;
 
@@ -13,11 +13,11 @@ function smoothScroll(target) {
     behavior: 'smooth'
   });
 
-  setTimeout(() => { afterSectionClick = false; }, 550)
+  setTimeout(() => { afterSectionClick = false; }, 1000)
 }
 
 function smoothScrollToTop() {
-  const headerOffset = 65; // Adjust this value based on the header's height
+  const headerOffset = 65;
 
   window.scroll({
     top: 0,
@@ -26,7 +26,7 @@ function smoothScrollToTop() {
 }
 
 function smoothScrollToTop() {
-  const headerOffset = 65; // Adjust this value based on the header's height
+  const headerOffset = 65;
 
   window.scroll({
     top: 0,
