@@ -79,3 +79,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+async function loadTranslations(lang) {
+  try {
+    const response = await fetch("/translations.json");
+    const translations = await response.json();
+    applyTranslations(translations[lang]);
+    localStorage.setItem("language", lang);
+  } catch (error) {
+    console.error("Error loading translations:", error);
+  }
+}
+
+function applyTranslations(translations) {
+  Object.keys(translations).forEach(key => {
+    const element = document.getElementById(key);
+    if (element) {
+      if (Array.isArray(translations[key])) {
+        // If the translation is a list, clear the element and add spans
+        element.innerHTML = "";
+        translations[key].forEach(item => {
+          const span = document.createElement("span");
+          span.className = "tag is-dark";
+          span.textContent = item;
+          element.appendChild(span);
+          element.appendChild(document.createTextNode(" ")); // Add space between tags
+        });
+      } else {
+        // Otherwise, replace innerHTML normally
+        element.innerHTML = translations[key];
+      }
+    }
+  });
+
+  const downloadLink = document.getElementById("resumeDownloadLink");
+  console.log(translations.resumeFileName);
+  console.log(downloadLink);
+  if (downloadLink && translations.resumeFilePath) {
+    console.log("haha");
+    downloadLink.href = translations.resumeFilePath;
+    downloadLink.setAttribute("download", translations.resumeFileName);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLanguage = localStorage.getItem("language") || "en";
+  loadTranslations(savedLanguage);
+});
+
+function changeLanguage(lang) {
+  loadTranslations(lang);
+}

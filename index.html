@@ -22,14 +22,22 @@
     </div>
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
+        <a class="navbar-item" onclick="changeLanguage('pt')">
+          <img src="images/br.png" alt="pt" width="24" height="16">
+          <p id="langPt"></p>
+        </a>
+        <a class="navbar-item" onclick="changeLanguage('en')">
+          <img src="images/us.png" alt="en" width="24" height="16">
+          <p id="langEn"></p>
+        </a>
         <a class="navbar-item" onclick="smoothScroll('#headerSection')">
-          Início
+          <p id="navHome"></p>
         </a>
         <a class="navbar-item" onclick="smoothScroll('#aboutSection')">
-          Sobre mim
+          <p id="navAbout"></p>
         </a>
         <a class="navbar-item" onclick="smoothScroll('#resumeSection')">
-          Currículo
+          <p id="navResume"></p>
         </a>
       </div>
     </div>
@@ -40,9 +48,9 @@
       <div class="container">
         <div class="columns is-vcentered">
           <div class="column is-8">
-            Saudações! Eu me chamo
-            <h1 class="title is-1">Iago Tito</h1>
-            <h2 class="subtitle is-3">SRE, engenheiro de observabilidade e programador</h2>
+            <p id="greetings"></p>
+            <h1 class="title is-1" id="homeName">Iago Tito</h1>
+            <h2 class="subtitle is-3" id="homeJobTitle"></h2>
             <div>
               <a href="https://github.com/iagotito" target="_blank" rel="noreferrer" class="button is-light is-outlined">
                 <i class="fab fa-github" style="margin-right: 8px;"></i>Github
@@ -67,7 +75,7 @@
   </section>
 
   <section class="section" id="aboutSection">
-    <h3 class="title is-2">Sobre mim</h3>
+    <h3 class="title is-2" id="aboutTitle"></h3>
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-4">
@@ -75,30 +83,7 @@
             <img src="images/iago-faco-programas.png" alt="Faço programas">
           </figure>
         </div>
-        <div class="column is-8">
-          <p>
-          Formado em Ciência da Computação pela Universidade Federal de Campina
-          Grande, trabalho atualmente na Stone como engenheiro de observabilidade.
-          </p>
-          <br>
-          <p>
-          Gosto de programação e frequentemente tenho ideias de algum programa
-          que eu poderia fazer. Mesmo que todas as minhas ideias provavelmente
-          já existam, eu ainda as inicio para aprender alguma coisa nova,
-          praticar ou só me diverir no processo. O difícil é acabar algum
-          desses projetos, mas um dia vai.
-          </p>
-          <br>
-          <p>
-          Tenho muita sensibilidade à luz, então, durante o dia, você sempre
-          vai me ver com esse óculos super eficiente contra a luminosidade
-          excessiva do sol.
-          </p>
-          <br>
-          <p>
-          No mais, também gosto de jogos, RPG e livros de ficção científica e fantasia.
-          </p>
-        </div>
+        <div class="column is-8" id="aboutText"></div>
       </div>
     </div>
   </section>
@@ -107,51 +92,36 @@
     <div class="column is-4">
       <section class="section" id="resumeSection">
         <div class="section-heading">
-          <h3 class="title is-2">Currículo</h3>
-          <h4 class="subtitle is-5">Mais das minhas experiências</h4>
-          <a href="files/curriculo-iago-tito-pt-br.pdf" download="Currículo Iago Tito.pdf" class="button is-link is-medium">
+          <h3 class="title is-2" id="resumeTitle"></h3>
+          <h4 class="subtitle is-5" id="resumeText"></h4>
+          <a href="#" id="resumeDownloadLink" download="" class="button is-link is-medium">
             <span class="icon">
               <i class="fas fa-file-alt"></i>
             </span>
-            <span>Baixe meu currículo</span>
+            <span id="resumeButtonText"></span>
           </a>
+          <!--<a href="files/curriculo-iago-tito-pt-br.pdf" download="Currículo Iago Tito.pdf" class="button is-link is-medium">-->
+            <!--<span class="icon">-->
+              <!--<i class="fas fa-file-alt"></i>-->
+            <!--</span>-->
+            <!--<span id="resumeButtonText"></span>-->
+          <!--</a>-->
         </div>
       </section>
     </div>
     <div class="column is-8">
       <section class="section" id="skillsSection">
-          <h2 class="title is-2">Habilidades</h2>
+          <h2 class="title is-2" id="skillsTitle"></h2>
         <div>
-          <p class="title is-5">Linguagens e Frameworks</p>
+          <p class="title is-5" id="skillsLanguagesFrameworksText"></p>
           <p class="tags">
-          <span class="tag is-dark">Pyhton</span>
-          <span class="tag is-dark">Go</span>
-          <span class="tag is-dark">Lua</span>
-          <span class="tag is-dark">C#</span>
-          <span class="tag is-dark">.NET</span>
-          <span class="tag is-dark">JavaScript</span>
-          <span class="tag is-dark">HTML5</span>
-          <span class="tag is-dark">CSS3</span>
-          <span class="tag is-dark">Bash</span>
-          <span class="tag is-dark">Flask</span>
+          <div id="skillsLanguagesFrameworksSpans"></div>
           </p>
         </div>
         <br>
-        <div><p class="title is-5">Outros</p>
+        <div><p class="title is-5" id="skillsOtherText"></p>
           <p class="tags">
-          <span class="tag is-dark">Git</span>
-          <span class="tag is-dark">Docker</span>
-          <span class="tag is-dark">Kubernetes</span>
-          <span class="tag is-dark">Automação e Webscraping</span>
-          <span class="tag is-dark">Shell script</span>
-          <span class="tag is-dark">Linux</span>
-          <span class="tag is-dark">Rest API</span>
-          <span class="tag is-dark">Prometheus</span>
-          <span class="tag is-dark">Datadog</span>
-          <span class="tag is-dark">OpenTelemetry</span>
-          <span class="tag is-dark">IaC</span>
-          <span class="tag is-dark">FaaS</span>
-          <span class="tag is-dark">Neovim</span>
+          <div id="skillsOtherSpans"></div>
           </p>
           <br>
         </div>
@@ -161,12 +131,7 @@
 
   <footer class="footer">
     <div class="content is-small">
-      <p>
-      Este site foi inspirado no
-      <a href="https://bulmatemplates.github.io/bulma-templates/templates/personal.html">template</a>
-      e site criados pelo
-      <a href="https://mubaidr.js.org">Muhammad Ubaid Raza</a>.
-      </p>
+      <div id="footerText"></div>
     </div>
   </footer>
   <script src="/scripts/index.js"></script>
